@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: demo
   namespace: default
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-world
+      app: demo
   template:
     metadata:
       labels:
-        app: hello-world
+        app: demo
     spec:
       containers:
-        - name: hello-world
+        - name: demo
           image: nginx
           imagePullPolicy: Always
           ports:
